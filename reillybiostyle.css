@@ -1,0 +1,246 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1px;
+}
+ol, ul {
+  list-style: none;
+  padding: 1px;
+ 
+  text-align: left;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/*
+
+Each of these CSS elements is associated with an HTML Element, Class, or ID.
+Flip between this CSS file and the HTML to see how things line up.
+Experiment with deleting lines of code from the CSS to see how it affects the webpage when you refresh in the browser.
+
+*/
+
+
+
+h1, h3, h4, h5, p {
+    margin-bottom: 22px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 150%;
+  color: #333;
+  background: #efeee7;
+  -webkit-animation: mymove 16s;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+  animation: mymove 16s;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-iteration-count: 200;
+}
+
+header {
+  background: ;
+  width: 100%;
+}
+
+#a-scene {
+    height: 100px;
+    width: 100%;
+}
+
+
+h1 {
+  padding: 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #F26F73;
+  text-align: center;
+  background: #333;
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 32px;
+  font-family: 'Lato', sans-serif;
+    color:  #F26F73;
+  font-size: 36px;
+  line-height: 44px;
+  width: 40%;
+  border: 2px;
+  text-align: center;
+  margin: 22px;
+  padding: 10px 0 10px 0;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 20px; 
+  clear: center;
+}
+
+.clearfix {
+    clear: center;
+}
+
+a { 
+  color: #2B7F8A;
+}
+
+.container {
+  width: 1024px;
+  margin: 40px auto;
+  clear: center;
+  position: relative;
+  z-index: 1;
+}
+
+#main-bio,
+#contact-info,
+#bio-image {
+  float: left;
+  text-align: left
+}
+
+#main-bio {
+  width: 60%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#contact-info {
+  width: 30%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#contact-form-name {
+  width: 30%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+#bio-image {
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+}
+
+#bio-text {
+    padding-right: 80px;
+    border: 2px;
+}
+
+ul.toolbar {
+    margin: 0;
+    color: white;
+}
+li {
+    float: left;
+    text-align: left;
+    }
+    
+    li {
+        display: inline-block;
+        text-align: left;
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+      
+    }
+    li a:hover {
+        background-color: #BFBFBF;
+    }
+
+
+/*  ====================
+Animated Background
+    ====================
+*/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {background-color: black;}
+  to {background-color: #aaf0d1;}
+}
+
+@keyframes mymove {
+  from {background-color: black;}
+  to {background-color: #aaf0d1;}
+}
+
+
+@-webkit-keyframes mymove {
+  from {background-color: black}
+  to {background-color: #aaf0d1;}
+}
+
+@keyframes mymove {
+  from {background-color: black;}
+  to {background-color: #aaf0d1}
+}
+
+@-webkit-keyframes mymove {
+  from {background-color: black;}
+  to {background-color: #aaf0d1;}
+
+}
+
+@keyframes mymove {
+  from {background-color: black;}
+  to {background-color: #aaf0d1;}
+
+}
+
+
+
+
+
+
+
+
+
