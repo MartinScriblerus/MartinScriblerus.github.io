@@ -5,19 +5,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
   <title>Matthew Reilly</title>
   <link rel="stylesheet" type="text/css" href="reillybiostyle.css">
-  <link rel="audio" type="dsp" href="Big_Exemple.dsp">
-  <!-- Fill in the href to the CSS such that this HTML file can access the CSS -->
+ 
+  <!--STILL TRYING FOR SOUND BELOW-->
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet1" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link rel="animistastylesheet" href="animista.css">
+
+<!-- Fill in the href to the CSS such that this HTML file can access the CSS -->
   <!-- Don't move the HTML or CSS file. Use Relative Linking -->
   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
   <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
   <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
-
-  <style> 
  
-.vertical-menu {
+<style> 
+ /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+ .slide-fwd-center {
+	-webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ .parallax {
+      /* The image used */
+      background-image: url('can-1972.jpg');
+    
+      /* Full height */
+      height: 100%; 
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .vertical-menu {
   width: 200px;
 }
 
@@ -58,48 +118,83 @@
       0%   {right:200px; top:0px;}
       100% {right:0px; top:0px;}
     }
-
-
-    </style>
- 
+</style> 
 </head>
 
-<body>
-      
-    <header class="clearfix">
-    <h1>Matthew Reilly: Developer Profile</h1>
-
-
+<!--BODY OF PAGE-->
+<body>      
+  <header class="clearfix">
+    <h1 class="header-text">Matthew Reilly: Developer Profile</h1>
   </header>
- 
-  <div id="a-scene"> 
-    
+ <div class="tabs">
+  <ul class="navbar">
+      <li class="navbar"class="tablinks" onclick="openCity(event, 'Writing')">Writing<a href="#home"></a></li>
+      <li class="navbar" class="tablinks" onclick="openCity(event, 'Creative')">Creative<a href="#news"></a></li>
+      <li class="navbar" class="tablinks" onclick="openCity(event, 'Teaching')">Teaching<a href="#contact"></a></li>
+      <li class="navbar" class="tablinks" onclick="openCity(event, 'Games')">Games<a class="active" href="#about"></a></li>
+  
+      <div id="Writing" class="tabcontent">
+          <h3>Writing</h3>
+          <p>I hold a Ph.D. in English from UT Texas and have published essays on topics x, y, and z</p>
+        </div>
+        
+        <div id="Creative" class="tabcontent">
+          <h3>Creative</h3>
+          <p>I play in a band and have performed on television and at major music festivals.</p> 
+        </div>
+        
+        <div id="Teaching" class="tabcontent">
+          <h3>Pedagogy</h3>
+          <p>I've taught students from high school freshmen to college seniors</p>
+        </div>
+
+        <div id="Games" class="tabcontent">
+            <h3>Games</h3>
+            <p>I make AR/VR and mobile games, which you can find at m_scriblerus@itch.io.</p>
+          </div>
+          <script>
+              function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              </script>
+
+
+    </ul>
+</div>
+
+
+  <div id="a-scene">     
         <a-scene embedded position="0 0 -1">
                 <a-camera position="0 0 -3" rotation="0 5 0"></a-camera>
                 <a-sky></a-sky>
                 <a-entity id="object-container" position="0 1.6 -2" scale="10 10 10"></a-entity>
                 <a-light type="ambient" intensity="0.1" color="#aaf0d1"></a-light>
                 <a-light intensity="1" color="#aaf0d1" position="-5.72 6.65 0.80" animation__color="property:color; dir:alternate; dur:200000; easing:easeInOutSine; loop:true; to:#F26F73" alongpath="path:10,10,-10 -20,10,-10 10,0,-10; closed:true; dur:120000"></a-light>
-                <a-light intensity="2" color="#F26F73" position="8.60 6.65 0.80" animation__color="property:color; dir:alternate; dur:200000; easing:easeInOutSine; loop:true; to:#aaf0d1" alongpath="path:-2,-2,5 2,-1,5 0,-1,5; closed:true; dur:30000;"></a-light>
-            
+                <a-light intensity="2" color="#F26F73" position="8.60 6.65 0.80" animation__color="property:color; dir:alternate; dur:200000; easing:easeInOutSine; loop:true; to:#aaf0d1" alongpath="path:-2,-2,5 2,-1,5 0,-1,5; closed:true; dur:30000;"></a-light>    
         </a-scene>
         <script type="text/javascript" src="app.js"></script>
-</div>
+  </div>
 
-
-<div class="container">
  
-    <div class="clearfix">
+  <div class="container">
+  <div class="clearfix">
 
-    
 
-<section id="main-bio">
-
-    <h2 class=item>Work</h2>
-
-       <img id="bio-image" src="catimage.jpg" alt="Your Name">
-
-        <p id="bio-text">What is Lorem Ipsum?
+<section class="row" id="main-bio">
+    <h2 class="col-xs-6 col-sm-3" id="WorkBioHeading">Work and Biography</h2>
+       <img id="bio-image" src="MattandRowanReilly.png" class="img-responsive" alt="Responsive image" alt="Portfolio Image">
+        <p id="bio-text">
+          What is Lorem Ipsum?
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 
                 Why do we use it?
@@ -112,34 +207,94 @@
                 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
                 
                 Where can I get some?
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. Write a short paragraph or two about yourself, or use placeholder text from <a href="http://www.lipsum.com/">www.lipsum.com</a></p>
-  
-</section>
-    
-    <section id="contact-info">
-      <h2>Contact Info</h2>
-      <ul class="toolbar">
-           <li>Email: <a href="#">someplace@gmail.com</a></li>
-           <li>Github: <a href="#">sampleName</a></li>
-           <li>Portfolio: <a href="#">Coming soon</a></li>
-    <section id="contact-form-name">
-            <ul class="toolbar">  
-              <li>First name: </li>
-              <li><input type="text" name="firstname" value=""></li>
-              <li>Last name:<br></li>
-              <li><input type="text" name="lastname" value=""></li>
-              <li><input type="submit" value="Submit"></li>
-            </ul>
-   
-              
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. Write a short paragraph or two about yourself, or use placeholder text from <a href="http://www.lipsum.com/">www.lipsum.com</a>
+
+                <!--WEB AUDIO HERE!!!-->
+                <div class="webaudio">
+                <section class="webaudio">
+                    <script src="webcomponents-lite.js"></script>
+                    <link rel="import" href="https://webaudiomodules.org/wam-host.html">
+                 
+                 <!--   <wamhost.context = new AudioContext();
+wamhost.load("https://webaudiomodules.org/synths/dexed.html").then(
+   wam => wam.connect( wam.context.destination ));> -->
+                 
+
+   <script src="https://unpkg.com/unmute" data-add-button="true"></script>
+
+                  <div>
+
+                  </div>
+       </script>
+       
+
+<script>
+
+</script>
+
+   </div>
+
+       
+                   
                 </section>
+              </div>
+              </p>
+              
+              
+                <div>
+                <section id="contact-info">
+                      <h2 id="fixed-contact">Contact Info</h2>
+                        <ul class="toolbar">
+                            <button type="button" class="slide-fwd-center"> <h3><li>Email: <a href="#">matthewfreilly@gmail.com</a></li></h3></button>
+                            <button type="button" class="slide-fwd-center"> <h3><li>Github: <a href="#">github.com/MartinScriblerus</a></li></h3></button>
+                             <button type="button" class="slide-fwd-center"> <h3><li>Portfolio: <a href="#">Coming Soon</a></li></h3></button>
+                             <div class="popup" onclick="myFunction()">
+                             <button type="button" class="slide-fwd-center" class="tablinks" onclick="openCity(event, 'DirectMessage')"> <h3><li>Direct Message: <a href="#">Say Hello!</a></li></h3></button>
+                            <span class="popuptext" id="myPopup">
+
+                              </div>
+                              <div id="DirectMessage" class="tabcontent"  class="popup" onclick="myFunction()">
+                                 <button type="button"> <ul class="toolbar"><p>
+                                     <button type="button"> <h4><li>First name: </li></h4> </button>
+                                       <button  type="button"> <li><input type="text" name="firstname" value=""></li></button>
+                                         <button  type="button"> <h4><li>Last name:<br></li></h4></button>
+                                           <button type="button"> <li><input type="text" name="lastname" value=""></li></button>
+                                          </div>      
+
+                             </span>
+                          
+                             <section id="contact-form-name">
+                             
+                              <script>
+                                  // When the user clicks on <div>, open the popup
+                                  function myFunction() {
+                                    var popup = document.getElementById("myPopup");
+                                    popup.classList.toggle("show");
+                                  }
+                                  </script>
+                            
+                            </section>
+                                   
+                                     </p>
+                                    </ul> 
+                </section>
+                
+              </div>
+              
+              </section>
+<b></b> 
+
+
+
+
+<div class="clearfix visible-xs-block"></div>
+
     </form> 
       </ul>
-    </section>
-  </div>
-
+</section>
 </div>
 
+</div>
 
 
       

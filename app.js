@@ -11,15 +11,15 @@ function getRandomNumber(x, y) {
 function getRandomColor() {
   let letters = '0123456789abcdef';
   let randomColor = '';
-  for (let i = 0; i < 6; i++) {
-    randomColor += letters[Math.floor(Math.random() * 16)];
+  for (let i = 0; i < 8; i++) {
+    randomColor += letters[Math.floor(Math.random() * 6)];
   }
   return randomColor;
 }
 
 // set sky values
 sky.setAttribute('color', `#${getRandomColor()}`);
-sky.setAttribute('animation__color', `property: color; dir: alternate; dur: 2000; easing: easeInOutSine; loop: true; to: #${getRandomColor()}`);
+sky.setAttribute('animation__color', `property: color; dir: alternate; dur: 40000; easing: easeOutBack; loop: true; to: #${getRandomColor()}`);
 
 // change this value for more or less rings
 let totalRingElements = 15;
@@ -29,14 +29,14 @@ function generateAllElements() {
   for(let a = 0; a < totalRingElements; a++){
 
     // element params
-    let totalCircleElements = getRandomNumber(10, 3);
-    let elementScale = getRandomNumber(3, 1);
-    let scaleDuration = getRandomNumber(3000, 1000);
+    let totalCircleElements = getRandomNumber(20, 5);
+    let elementScale = getRandomNumber(20, 5);
+    let scaleDuration = getRandomNumber(3000, 10000);
 
     // path params
-    let pathValOne = getRandomNumber(21, -10);
+    let pathValOne = getRandomNumber(1, -10);
     let pathValTwo = getRandomNumber(11, -20);
-    let pathDuration = getRandomNumber(6000, 5000);
+    let pathDuration = getRandomNumber(6000, 10000);
 
     for (let i = 1; i <= totalCircleElements; i++) {
 
@@ -51,8 +51,8 @@ function generateAllElements() {
       circleElement.setAttribute('class', `circleElement`);
       circleElement.setAttribute('scale', `${elementScale} ${elementScale} ${elementScale}`);
       circleElement.setAttribute('material', `color:#${getRandomColor()}; metalness: 0; roughness: 0`);
-      circleElement.setAttribute('geometry', `primitive: sphere; radius: 1.5`);
-      circleElement.setAttribute('animation__yoyo', `property: scale; dir: alternate; dur: ${scaleDuration}; easing: easeInOutSine; loop: true; to: 0 0 0`);
+      circleElement.setAttribute('geometry', `primitive: sphere; radius: .5`);
+      circleElement.setAttribute('animation__yoyo', `property: scale; dir: alternate; dur: ${scaleDuration}; easing: easeOutBack; loop: true; to: 0 0 0`);
       circleElementContainer.appendChild(circleElement);
       rotateContainer.appendChild(circleElementContainer);
 

@@ -60,10 +60,57 @@ Experiment with deleting lines of code from the CSS to see how it affects the we
 
 */
 
+/* Add a gray right border to all list items, except the last item (last-child) */
+ul.navbar {
+  position: fixed;
+  bottom: 0px;
+left: 0px;
+  width: 64%;
+  padding-right: 10px;
+  z-index: 1;
+    padding-left: 10px;
+    background-color: #333;
+    border-color: #aaf0d1;
+    bottom: 0;
+    clear: center;
+}
 
+li.navbar {
+  border-right: 1px solid #333;
+  color: white;
+  width: 100px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 7.5px;
+  border: 2px;
+  text-align: center;
+  color: white; 
+
+}
+
+
+li:hover {
+  background-color: #F26F73;
+  box-shadow: 4px, 4px, 2px, 1px #aaf0d1;
+  z-index: 6
+
+}
+li:last-child {
+  border-right: none;
+}
+
+.li:hover .dropdown-content {
+  display: block;
+}
+
+li {
+  color:  white;
+}
 
 h1, h3, h4, h5, p {
     margin-bottom: 22px;
+    font-family: 'Domine', 'Lato', serif;
 }
 
 body {
@@ -72,7 +119,7 @@ body {
   font-size: 18px;
   line-height: 150%;
   color: #333;
-  background: #efeee7;
+  background: #333;
   -webkit-animation: mymove 16s;  /* Safari 4.0 - 8.0 */
   -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
   animation: mymove 16s;
@@ -82,14 +129,26 @@ body {
 }
 
 header {
-  background: ;
+  background: #333;
   width: 100%;
+  position: fixed;
+  z-index: 2;
 }
+
 
 #a-scene {
     height: 100px;
     width: 100%;
+    position: fixed;
+    z-index: 150 !important;
+    top: 100px;
+    clear: center;
 }
+
+
+
+
+
 
 
 h1 {
@@ -99,21 +158,23 @@ h1 {
   color: #F26F73;
   text-align: center;
   background: #333;
-  font-family: 'Lato', sans-serif;
-  font-size: 36px;
+  font-family: 'Domine', 'Lato', serif;
+  font-size: 44px;
   line-height: 44px;
 }
 
 h2 {
-  font-size: 32px;
-  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-family: 'Domine', 'Lato', serif;
     color:  #F26F73;
   font-size: 36px;
   line-height: 44px;
   width: 40%;
   border: 2px;
   text-align: center;
-  margin: 22px;
+  margin: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   padding: 10px 0 10px 0;
   border-style: solid;
   border-width: 2px;
@@ -122,52 +183,157 @@ h2 {
   clear: center;
 }
 
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 18px;
+}
+
 .clearfix {
     clear: center;
 }
 
 a { 
   color: #2B7F8A;
+  font-family: 'Domine', 'Lato', serif;
 }
+
 
 .container {
   width: 1024px;
   margin: 40px auto;
   clear: center;
   position: relative;
-  z-index: 1;
+  z-index: 0;
+  top: 129px;
 }
 
 #main-bio,
 #contact-info,
 #bio-image {
   float: left;
-  text-align: left
+  text-align: left;
+  clear: center;
+
 }
 
 #main-bio {
-  width: 60%;
+  width: 69%;
   padding-right: 20px;
   padding-left: 20px;
+  margin-left: 25px;
+  margin-right: 15px;
+  margin-top: 30px;
+  clear: center;
 }
 
 #contact-info {
-  width: 30%;
+  width: 34%;
+  height: 100%;
+  margin: 30px;
     padding-right: 20px;
     padding-left: 20px;
+    position: center;
+    z-index: 6 !important;
+    background-color: #333;
+    position: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: 170px;
+    width: 300px;
+    clear: center;
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+
+.tabcontent {
+  z-index: 200;
+}
+
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  width: 600px;
+  height: 200px; 
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }
 
 #contact-form-name {
   width: 30%;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  
+  
 }
-
+#fixed-contact {
+  padding-right: 40px;
+  position: center;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: center;
+}
 
 #bio-image {
   width: 300px;
   height: 300px;
-  margin-right: 20px;
+  margin-right: 80px;
+  box-shadow: 12px 12px 2px 2px black;
+ margin-right: 25px;
+ margin-bottom: 25px;
 }
 
 #bio-text {
@@ -177,11 +343,13 @@ a {
 
 ul.toolbar {
     margin: 0;
-    color: white;
+    z-index: 6
+
 }
 li {
     float: left;
     text-align: left;
+    z-index: 6
     }
     
     li {
@@ -189,13 +357,40 @@ li {
         text-align: left;
         padding-top: 7px;
         padding-bottom: 7px;
+        z-index: 6
 
       
     }
-    li a:hover {
-        background-color: #BFBFBF;
+   
+    ul button {
+      size: 15px;
+      background-color: #333;
+      width: 100%;
+      padding-top: 5px;
+      margin-top: 5px;
+      border-style: solid;
+      border-color: #aaf0d1;
+      border-radius: 10px;
+      z-index: 6
+    }
+    button:hover {
+      background-color: #F26F73;
+      box-shadow: 4px, 4px, 2px, 1px #aaf0d1;
+      z-index: 6
+      
     }
 
+
+
+
+    
+  /* ----------------------------------------------
+ * Generated by Animista on 2019-10-11 23:30:44
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+    
 
 /*  ====================
 Animated Background
@@ -238,9 +433,75 @@ Animated Background
 
 
 
+p{
+  -webkit-animation: color-change 32s alternate;
+  -moz-animation: color-change 32s alternate;
+  -o-animation: color-change 32s alternate;
+  -ms-animation: color-change 32s alternate;
+  animation: color-change 32s alternate;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-iteration-count: 200;
+}
+
+@-webkit-keyframes color-change {
+  0% { color: black}
+85% { color: black; }
+  100% { color: white; }
+}
+@-moz-keyframes color-change {
+  0% { color: black}
+  85% { color: black; }
+    100% { color: white; }
+}
+@-ms-keyframes color-change {
+  0% { color: black}
+85% { color: black; }
+  100% { color: white; }
+}
+@-o-keyframes color-change {
+  0% { color: black}
+  85% { color: black; }
+    100% { color: white; }
+}
+@keyframes color-change {
+  0% { color: black}
+  85% { color: black; }
+    100% { color: white; }
+}
 
 
+/* ----------------------------------------------
+ * Generated by Animista on 2019-10-11 23:30:44
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+ a:hover {
+ @-webkit-keyframes slide-fwd-center{0%{-webkit-transform:translateZ(0);transform:translateZ(0)}100%{-webkit-transform:translateZ(160px);transform:translateZ(160px)}}@keyframes slide-fwd-center{0%{-webkit-transform:translateZ(0);transform:translateZ(0)}100%{-webkit-transform:translateZ(160px);transform:translateZ(160px)}}
+ }
+/*
+===================================
+BOLD ATTEMPT TO CREATE A SYNTH
+===================================
+*/
+p.webaudio {
+  mask-border-width: 40%;
+  height: 100px;
+  width: 30%;
+  box-sizing: border-box;
+  position: left;
+}
+
+#shrinkWamHost {
+  width: 30%;
+}
 
 
+#WorkBioHeading {
+
+color: black;
+}
 
 
