@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alegreya:900|Catamaran:800|Lora|Merriweather+Sans:700|Sulphur+Point:700|Vollkorn:700&display=swap" rel="stylesheet">
   <title>Matthew Reilly</title>
   <link rel="stylesheet" type="text/css" href="reillybiostyle.css">
@@ -20,16 +21,14 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
-<!-- Fill in the href to the CSS such that this HTML file can access the CSS -->
-  <!-- Don't move the HTML or CSS file. Use Relative Linking -->
-  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+ <!-- Fill in the href to the CSS such that this HTML file can access the CSS
+  Don't move the HTML or CSS file. Use Relative Linking -->
+  <!-- <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
   <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
-  <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
- 
-<style> 
+  <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script> -->
 
-</style> 
 </head>
 
 
@@ -41,8 +40,8 @@ Body of Page / Header
 <body>      
     <div class="container">
       <div class="row">
-      <div class="small-12 header-text" style="float: left;">
-          <h1 style="float: left; padding-left:40px">Matthew Reilly</h1>
+      <div class="small-12 medium-12 large-12 header-text" style="float: left;">
+          <h1 style="float: left; padding-left:40px; padding-bottom:20px;padding-top:20px;">Matthew Reilly</h1>
       </div>
       </div>
      
@@ -52,62 +51,27 @@ Body of Page / Header
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" style="margin-left:25px;" href="#">Contact</a>
+                  <a class="nav-link" style="margin-left:25px; padding-top:5px;" href="https://martinscriblerus.github.io/SlideCastDemo/">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Github</a>
+                  <a class="nav-link" href="https://github.com/MartinScriblerus">Github</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btnPortfolio" type="button" class="btn btn-primary" id="portfolioLink" data-toggle="modal" data-target=".bd-example-modal-lg" href="#">Portfolio</a>
+                  <a class="nav-link btnPortfolio" type="button" class="btn btn-primary" id="portfolioLink" data-toggle="modal" data-target=".bd-example-modal-lg" href="https://scholar.google.com/citations?user=hYHrpsEAAAAJ&hl=en">Publications</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btnPortfolio" type="button" class="btn btn-primary" id="portfolioLink" data-toggle="modal" data-target=".bd-example-modal-lg" href="https://still-single.tumblr.com/post/151984054306/hidden-ritual-always-lp-monofonus-press">Music</a>
                 </li>
               </ul>
             </div>
           </nav>
           </div>
         </div>
-<!-- 
-  ==============================================================================
-  GRID MODAL FROM NAVBAR (Contained in Div Above)
-  ==============================================================================
--->
-               <!-- Large modal -->
 
-<!-- <div class="small-12 modal-dialog modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-content" hidden>
-   
-    </div>
-  </div>
-</div> -->
 
-        <!-- <div class="small-12" id="contact-info">
-            <ul>
-              <li>Email: <a href="#">matthewfreilly@gmail.com</a></li>
-              <li>Github: <a href="#">github.com/MartinScriblerus</a></li>
-              <li>Portfolio: <a href="#">SlideCast</a></li>  
-            </ul> 
-      </div> -->
     
     </div>
 
-<!-- 
-================================================================================================================================================
-A-Frame Styling
-================================================================================================================================================
--->
-      <div class="small-12">
-        <p>
-          <div id="a-scene">     
-            <a-scene embedded position="0 0 -1">
-              <a-camera position="0 0 -3" rotation="0 5 0"></a-camera>
-              <a-sky></a-sky>
-              <a-entity id="object-container" position="0 1.6 -2" scale="10 10 10"></a-entity>
-              <a-light type="ambient" intensity="0.1" color="##404040"></a-light>
-              <a-light intensity="1" color="#F6F6F6" position="-5.72 6.65 0.80" animation__color="property:color; dir:alternate; dur:200000; easing:easeInOutSine; loop:true; to:#F26F73" alongpath="path:10,10,-10 -20,10,-10 10,0,-10; closed:true; dur:120000"></a-light>
-              <a-light intensity="2" color="##070707" position="8.60 6.65 0.80" animation__color="property:color; dir:alternate; dur:200000; easing:easeInOutSine; loop:true; to:#aaf0d1" alongpath="path:-2,-2,5 2,-1,5 0,-1,5; closed:true; dur:30000;"></a-light>    
-            </a-scene>
-          </div>
-        <script type="text/javascript" src="app.js"></script>
-          </p>
 
       <!--
 
@@ -116,42 +80,62 @@ Image & Bio Text
 ================================================================================================================================================
 -->
       
-    <div class="row">
+    <div class="row" style="border-bottom: 5px solid #070707;">
       <div class="large-12 medium-12 small-12 bio-image" id="main-bio">
           <img id="bio-image" src="hidden_ritual_promo_photo-1600x0-c-default.jpg" class="img-responsive" alt="Portfolio Image" style="margin-right:60px; margin-bottom: 40px;">
         
        
-          <p class="bio-text" style="padding-top: 50px; padding-right:80px;">
+          <p class="bio-text" style="padding-top: 20px; padding-right:120px;">
             Matthew Reilly is a researcher, educator, consultant, and web developer.
         
             He has published scholarly essays, written articles on technology, and completed a book (currently under review) on the history of satire.
           
-            He is also an avid collaborator. Follow the links to try out his voice-activated presentation tool (made with Matthias Quintero) and to hear his drumming with the band Hidden Ritual. He currently lives in Austin, TX with his wife and eight-month-old son.   </p> 
+            He is also an avid collaborator. Follow the links to try out his voice-activated presentation tool (made with Matthias Quintero) and to hear his drumming with the Austin band Hidden Ritual. He currently lives in Austin, TX with his wife and eight-month-old son.   </p> 
   
           </div>
-          </div>
-            <!-- 
-================================================================================================================================================
-Contacts
-================================================================================================================================================
--->
+       
+            
      
- 
-              
-
-<!-- 
+ <!-- 
 ================================================================================================================================================
-???
+A-Frame Styling
 ================================================================================================================================================
 -->
+<!-- <div class="large-12 medium-12 small-12">
+     
+  <div id="a-scene" style="height:100%;">     
+    <a-scene embedded position="0 200 -1">
+      <a-camera position="0 0 -3" rotation="0 5 0"></a-camera>
+      <a-sky></a-sky>
+      <a-entity id="object-container" position="0 1.6 -2" scale="10 10 10"></a-entity>
+      <a-light type="ambient" intensity="0.1" color="##404040"></a-light>
+      <a-light intensity="1" color="#F6F6F6" position="-5.72 6.65 0.80" animation__color="property:color; dir:alternate; dur:200000; easing:easeInOutSine; loop:true; to:#F26F73" alongpath="path:10,10,-10 -20,10,-10 10,0,-10; closed:true; dur:120000"></a-light>
+      <a-light intensity="2" color="##070707" position="8.60 6.65 0.80" animation__color="property:color; dir:alternate; dur:200000; easing:easeInOutSine; loop:true; to:#aaf0d1" alongpath="path:-2,-2,5 2,-1,5 0,-1,5; closed:true; dur:30000;"></a-light>    
+    </a-scene>
+  </div>
+<script type="text/javascript" src="app.js"></script>
 
-
-
+</div>
+               -->
+  
+                  <div class="large-12 medium-12 small-12">
+                    <footer>
+                  <h3 style="color:#070707; text-align: center;">matthewfreilly@gmail.com</h3>
+                  <a href="https://www.linkedin.com/in/matthew-reilly-91b316142/"><h3 style="text-align: center">LinkedIn</h3></a>
+                  <a href="https://twitter.com/A00PE"><h3 style="text-align: center">Twitter</h3></a>
+                </footer>
+                </div>
+           
+          
 <div class="clearfix visible-xs-block"></div>
 <script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="script.js"></script>
 
-</body>
 
+
+
+
+</div>
+</body>
 </html>
 

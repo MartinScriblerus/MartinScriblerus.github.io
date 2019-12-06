@@ -33,80 +33,60 @@ body {
 }
 .header-text {
   border-top: 2px solid #070707;
-  border-bottom: 4px solid #070707;
+  border-bottom: px solid #070707;
   width: 100%;
+  padding-top:10px;
+  padding-bottom: 10px;
   float: left;
   background-color:  #F6F6F6;
+}
+.footer {
+  background-color: #070707;
+  width:33%
+  color:#f6f6f6;
+  text-align: center;
 }
 .navbar-nav {
   width:100%;
   background-color:  #F6F6F6;
   color: #070707;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #070707;
+  
 }
 .nav-link{
   color:  #070707;
   font-size: 22px;
-  padding-right: 100px;
-  padding-top: 10px;
   padding-bottom: 10px;
-  right:30px;
   font-family: 'Merriweather Sans', sans-serif;
   text-align: center;
+  width: 400px;
+  padding-right: 50px;
 }
 
-
-
-
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-
-
-/*
-
-Each of these CSS elements is associated with an HTML Element, Class, or ID.
-Flip between this CSS file and the HTML to see how things line up.
-Experiment with deleting lines of code from the CSS to see how it affects the webpage when you refresh in the browser.
-
-*/
-
-/* Add a gray right border to all list items, except the last item (last-child) */
 ul.navbar {
   position: fixed;
   bottom: 0px;
-left: 0px;
-
+  left: 0px;
   padding-right: 10px;
   z-index: 1;
- 
-    clear: center;
+  clear: center;
+}
+a:hover {
+  color: #f6f6f6;
+  width: 400px;
 }
 
 li:hover {
   background-color: #070707;
+  color: #F6F6F6; 
   box-shadow: 4px, 4px, 2px, 1px #aaf0d1;
   z-index: 6
 }
 li:last-child {
   border-right: none;
 }
-
-.li:hover .dropdown-content {
-  display: block;
-}
-
-
-
 
 body {
   padding: 0;
@@ -131,7 +111,6 @@ header {
   top: 10px;
 }
 
-
 /* #a-scene {
     height: 100px;
     width: 100%;
@@ -149,7 +128,7 @@ h1 {
   color: #070707;
   text-align: center; 
   font-family: 'Sulphur Point', sans-serif;
-  font-size: 42px;
+  font-size: 64px;
 
 }
 
@@ -198,7 +177,7 @@ p {
 }
 
 a { 
-  font-family: 'Domine', 'Lato', serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 
@@ -221,7 +200,7 @@ a {
   width: 100%;
   margin-left: 25px;
   margin-right: 15px;
-  margin-top: 30px;
+  margin-top: 10px;
   clear: center;
 
 
@@ -249,10 +228,7 @@ li {
   padding-bottom: 7px;
   z-index: 6;  
 }  
-button:hover {
-background-color: #F26F73;
-z-index: 6
-}
+
 
 
 /* Add animation (fade in the popup) */
@@ -269,8 +245,9 @@ z-index: 6
 
 
 #bio-image {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
+  background-image: 10px;
   box-shadow: 24px 24px 6px 6px black;
   border: 2px solid black;
   border-radius: 50%;
@@ -279,18 +256,11 @@ z-index: 6
 
 #bio-text {
     float: right;
-    padding-top:50px;
+
     padding-bottom:50px;
  
- 
-    border: 2px solid black;
-    border-radius: 5%;
 }
 
-@media only screen and (max-width: 600px) {
-  p{
-    font-size:16px
-}
 
 
 
@@ -337,11 +307,11 @@ Animated Background
 }
 
 p{
-  -webkit-animation: color-change 16s alternate;
-  -moz-animation: color-change 16s alternate;
-  -o-animation: color-change 16s alternate;
-  -ms-animation: color-change 16s alternate;
-  animation: color-change 16s alternate;
+  -webkit-animation: color-change 32s alternate;
+  -moz-animation: color-change 32s alternate;
+  -o-animation: color-change 32s alternate;
+  -ms-animation: color-change 32s alternate;
+  animation: color-change 32s alternate;
   animation-fill-mode: both;
   animation-direction: alternate;
   animation-iteration-count: 200;
@@ -411,26 +381,6 @@ p{
   border-top: none;
 }
 
-
-    .vertical-menu {
-  width: 200px;
-}
-
-.vertical-menu a {
-  background-color:  #F6F6F6;
-  color: black;
-  display: block;
-  padding: 12px;
-}
-
-.vertical-menu a:hover {
-  background-color:  #F26F73;
-}
-
-.vertical-menu a.active {
-  background-color:  #F26F73;
-  color:  black;
-}
 
          html, body { margin: 0; padding: 0; overflow: scroll;}
    
