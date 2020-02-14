@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Alegreya:900|Catamaran:800|Lora|Merriweather+Sans:700|Sulphur+Point:700|Vollkorn:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Galada|Lobster|Noto+Sans+SC&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Galada|Lobster&display=swap" rel="stylesheet">
   <title>Matthew Reilly</title>
   <link rel="stylesheet" type="text/css" href="reillybiostyle.css">
  
@@ -41,7 +41,7 @@ Body of Page / Header
     <div class="container">
       <div class="row">
       <div class="small-12 medium-12 large-12 header-text" style="float: left;">
-          <h1 style="float: left; padding-left:40px; padding-bottom:20px;padding-top:20px;">Matthew Reilly</h1>
+          <h1 style="float: left; margin-left:40px; padding-bottom:20px;padding-top:20px;">Matthew Reilly</h1>
       </div>
       </div>
      
@@ -51,16 +51,18 @@ Body of Page / Header
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" style="margin-left:25px; padding-top:5px;" href="https://martinscriblerus.github.io/SlideCastDemo/">Portfolio</a>
+                  <a class="nav-link" style="margin-left:15px; padding-top:5px;" href="https://polar-caverns-23158.herokuapp.com/">Slidecast</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" style="padding-top:5px;" href="https://project-2-spotify.herokuapp.com/">Spotify Genre Map</a>
+                </li>
+
+            
+                <li class="nav-item">
+                  <a class="nav-link btnPortfolio" type="button" class="btn btn-primary" id="portfolioLink" data-toggle="modal" data-target=".bd-example-modal-lg" href="https://scholar.google.com/citations?user=hYHrpsEAAAAJ&hl=en">Writing & Research</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/MartinScriblerus">Github</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btnPortfolio" type="button" class="btn btn-primary" id="portfolioLink" data-toggle="modal" data-target=".bd-example-modal-lg" href="https://scholar.google.com/citations?user=hYHrpsEAAAAJ&hl=en">Publications</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btnPortfolio" type="button" class="btn btn-primary" id="portfolioLink" data-toggle="modal" data-target=".bd-example-modal-lg" href="https://still-single.tumblr.com/post/151984054306/hidden-ritual-always-lp-monofonus-press">Music</a>
+                  <a class="nav-link btnPortfolio" type="button" class="btn btn-primary" id="portfolioLink" data-toggle="modal" data-target=".bd-example-modal-lg" href="https://still-single.tumblr.com/post/151984054306/hidden-ritual-always-lp-monofonus-press">Creative</a>
                 </li>
               </ul>
             </div>
@@ -80,17 +82,16 @@ Image & Bio Text
 -->
       
     <div class="row">
-      <div class="large-12 medium-12 small-12 bio-image" id="main-bio">
-          <img id="bio-image" src="hidden_ritual_promo_photo-1600x0-c-default.jpg" class="img-responsive" alt="Portfolio Image" style="margin-right:60px; margin-bottom: 40px;">
+      <div class="large-8 medium-8 small-8 bio-image" id="main-bio">
+          <img id="bio-image"  src="DesertReilly.png" class="img-responsive" style="margin-right:60px; margin-left: 30px; margin-bottom: 40px; filter: hue-rotate(90deg);">
         
-       
-          <p class="bio-text" style="padding-top: 20px; padding-right:120px;">
-            Matthew Reilly is a researcher, educator, consultant, and web developer.
-        
-            He has published scholarly essays, written articles on technology, and completed a book (currently under review) on the history of satire.
-          
-            He is also an avid collaborator. Follow the links to try out his voice-activated presentation tool (made with Matthias Quintero) and to hear his drumming with the Austin band Hidden Ritual. He currently lives in Austin, TX with his wife and eight-month-old son.   </p> 
-  
+       <div class="large-4 medium-4 small-4" id="text-background">
+          <p class="bio-text" style="padding-top: 50px; padding-right: 40px; padding-left: 10px; padding-bottom: 30px; color: #f6f6f6; background-color: #070707;">
+           I'm a writer, teacher, musician, and web developer from Austin, TX. 
+            As a writer, my work has ranged from peer-reviewed articles and a book (currently under consideration) to industry journalism focused on augmented and virtual reality. 
+            As a developer, I've devised and collaboratively built websites, which include a voice-activated presentation tool that controls Google Slides via custom keywords, an interactive map that tracks listeners across Spotify's 4,000 genres, and (in my current project) a topic and sentiment analyzer that uses natural language processing to visualize news coverage. 
+            In addition to my writing and coding, I'm a teacher at Austin Community College and a musician in the Austin band <a href="https://dustedmagazine.tumblr.com/post/189649991247/dusteds-decade-picks-the-lists">Hidden</a> <a href="https://www.thrashermagazine.com/articles/videos/the-program-s-cyberbully-edit/">Ritual</a>. 
+          </div>
           </div>
        </div>
             
@@ -100,10 +101,10 @@ Image & Bio Text
 A-Frame Styling
 ================================================================================================================================================
 -->
-<!-- <div class="large-12 medium-12 small-12">
+<div class="large-12 medium-12 small-12">
      
   <div id="a-scene" style="height:100%;">     
-    <a-scene embedded position="0 200 -1">
+    <a-scene embedded position="0 200 3">
       <a-camera position="0 0 -3" rotation="0 5 0"></a-camera>
       <a-sky></a-sky>
       <a-entity id="object-container" position="0 1.6 -2" scale="10 10 10"></a-entity>
@@ -115,13 +116,31 @@ A-Frame Styling
 <script type="text/javascript" src="app.js"></script>
 
 </div>
-               -->
+              
+
+
+               <div class="bg-video frameborder='0' allowfullscreen">
+                <!-- <div class="overlay">
+           </div> -->
+                <div id="player">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/uAH2UcnAFg0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+
                   <div class="row" style="bottom:0px;">
+                    
                   <div class="large-12 medium-12 small-12" style="border-top:2px solid #070707; margin-top: 30px;margin-bottom:30px;">
-                    <footer>
+   
+                  </div>
+                 
+                    <footer id="bio-footer">
                   <h3 style="color:#070707; text-align: center;">matthewfreilly@gmail.com</h3>
                   <a href="https://www.linkedin.com/in/matthew-reilly-91b316142/"><h3 style="text-align: center">LinkedIn</h3></a>
                   <a href="https://twitter.com/A00PE"><h3 style="text-align: center">Twitter</h3></a>
+                
+                    <a href="https://github.com/MartinScriblerus"><h3 style="text-align: center">Github</h3></a>
+              
                 </footer>
                 </div>
               </div>
