@@ -15,10 +15,10 @@ function onYouTubeIframeAPIReady() {
         videoId: 'TW733Ut5zE0', // the ID of the video (mentioned above)
         playerVars: {
           autoplay: 1, // start automatically
-          start: 10,
+          start: 1,
             
             mute: 1,
-          end: 100,
+          end: 3,
           controls: 0, // don't show the controls (we can't click them anyways)
           modestbranding: 1, // show smaller logo
           loop: 10, // loop when complete
