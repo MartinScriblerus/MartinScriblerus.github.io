@@ -15,14 +15,14 @@ function onYouTubeIframeAPIReady() {
         videoId: 'TW733Ut5zE0', // the ID of the video (mentioned above)
         playerVars: {
           autoplay: 1, // start automatically
-          start: 1,
+          start: 10,
             
             mute: 1,
-          end: 3,
+          end: 20,
           controls: 0, // don't show the controls (we can't click them anyways)
           modestbranding: 1, // show smaller logo
-          loop: 10, // loop when complete
-          playlist: 'TW733Ut5zE0' // required for looping, matches the video ID
+          playlist: 'TW733Ut5zE0', // required for looping, matches the video ID
+          loop: 1, // loop when complete
         }
   });
 }
